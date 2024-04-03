@@ -1,4 +1,4 @@
-![Screenshot 2024-04-02 202017](https://github.com/acibojbp/Azure-Arc/assets/164168280/8a16227a-de86-4fd3-a73b-05c211133edf)# Onboarding On-Premises Servers to Azure with Azure Arc
+# Onboarding On-Premises Servers to Azure with Azure Arc
 
 This project guides you through the process of onboarding an on-premises server to Azure using Azure Arc, with the aim of leveraging the benefits of Microsoft Defender for Servers. 
 
