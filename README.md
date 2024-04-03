@@ -4,6 +4,8 @@ This project guides you through the process of onboarding an on-premises server 
 
 For demonstration purposes, a Windows Server 2022 with Desktop experience is used. Please note that the onboarding process for a Windows Server Core would differ from the steps outlined in this project.
 
+![Diagram](https://github.com/acibojbp/Azure-Arc/assets/164168280/d936cf17-57b6-4a14-8665-8f3aeea5c815) 
+
 ## Contents
 [Add a Machine to Azure Arc](#add-a-machine-to-azure-arc)
 
@@ -18,15 +20,25 @@ For demonstration purposes, a Windows Server 2022 with Desktop experience is use
 
 Begin by accessing the Azure Portal and entering "Azure Arc" into the search bar. Once the "Azure Arc" option appears, click on it to proceed to the next page. 
 
+![Screenshot 2024-04-02 192756](https://github.com/acibojbp/Azure-Arc/assets/164168280/f4dde14c-a67b-413a-b72f-2443cac62ee9)
+
 On the Azure Arc overview page, you will see various options. Choose "Machines" from the available categories. After selecting "Machines," click on "Add/Create" and then select "Add a Machine".
 
+![Screenshot 2024-04-02 192831](https://github.com/acibojbp/Azure-Arc/assets/164168280/d4fd4ea3-8928-4c52-b89a-4843ee5c5f42)
+
 After selecting "Add a Machine," you will be presented with additional options. Since we are only onboarding a single server for this lab, navigate to the "Add a single server" section and click "Generate script."
+
+![Screenshot 2024-04-02 192840](https://github.com/acibojbp/Azure-Arc/assets/164168280/b1d7c683-9546-4954-8701-537e3209b9b0)
 
 First up, we need to pick a region. Go ahead and select the one that's closest to your location.
 
 After selecting the region, it's important to set up a resource group. Keeping a separate group for your servers is a good practice for organization. For this lab, let's create a new resource group and name it "Windows-Servers."
 
+![Screenshot 2024-04-02 193244](https://github.com/acibojbp/Azure-Arc/assets/164168280/1ca37d38-e97a-4863-83e8-68278b78821a)
+
 With the region and resource group in place, click on the "Download and run script" button to move on to the next page. Here, we'll find the generated PowerShell script. Click on the copy icon to copy it to our clipboard. This script will be pasted into our Windows Server in the next step to initiate the onboarding process.
+
+![Screenshot 2024-04-02 201357](https://github.com/acibojbp/Azure-Arc/assets/164168280/97b88916-ede9-400b-8810-6deed408071b)
 
 ### Important Note for Best Practices
 - Adhere to best security practices by avoiding the use of an Azure account with Owner access. Instead, use an account with Azure Connected Machine Onboarding or Azure Connected Machine Resource Administrator role assignments. [Learn more](https://aka.ms/ArcServerOnboardingSecurityPractices)
@@ -35,10 +47,19 @@ Once we've configured the region and resource group, we'll move on to the next p
 
 Now, let's shift our focus to our Windows Server. To run the script, open PowerShell ISE. Make sure to run it as an administrator.
 
-Create a new script then paste the copied script into PowerShell ISE. Then, either click the play button or press F5 to run the script.
-After executing the script, wait for it to complete. You'll be prompted to log in to our Azure account.
+![VirtualBox_Windows Server_02_04_2024_20_08_17](https://github.com/acibojbp/Azure-Arc/assets/164168280/c599c09c-e5f5-49e5-b859-b5c75f68b015)
+
+Create a new script then paste the copied script into PowerShell ISE. 
+
+![VirtualBox_Windows Server_02_04_2024_20_08_44](https://github.com/acibojbp/Azure-Arc/assets/164168280/1f3e2976-918c-48b0-91a7-addad6c2620b)
+
+Then, either click the play button or press F5 to run the script. After executing the script, wait for it to complete. You'll be prompted to log in to our Azure account.
+
+![VirtualBox_Windows Server_02_04_2024_20_10_04](https://github.com/acibojbp/Azure-Arc/assets/164168280/32daf2b6-fe20-4b45-baa2-db9ad79e2e89)
 
 Once the login process is completed, return to the Azure Portal. Navigate to Azure Arc and select "Servers." We should now see our machine listed there.
+
+![Screenshot 2024-04-02 201444](https://github.com/acibojbp/Azure-Arc/assets/164168280/2a8a60ff-88a3-4ded-a3c7-beada28e7233)
 
 ## Integrating with Microsoft Defender for Servers
 
